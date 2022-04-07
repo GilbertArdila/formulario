@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header>
+        <img src="https://cdn3.iconfinder.com/data/icons/shopping-370/192/21_survey_feedback_test_client_employee_computer_forms-128.png" alt="imagen de un formulario" class="header_imagen">
+        <h2>Validaci&oacute;n de formularios con Js</h2>
+    </header>
+    <main>
+        <section class="main-form-section">
+            <form action="#" class="main-form">
+                <label for="name">Nombre y apellido</label>
+                <input type="text" id="name"  autocomplete="name" placeholder="Juan Perez" autofocus>
+                <p class="name-message message" id="date-message"></p>
+                
+
+                <label for="mail">E-mail</label>
+                <input type="email" id="mail"  autocomplete="email" placeholder="juan_perez@gmail.com" inputmode="verbatim">
+                <p class="date-message message" id="mail-message"></p>
+                
+                <label for="phone">Tel&eacute;fono</label>
+                <input type="number" id="phone"  autocomplete="tel" inputmode="numeric" >
+                <p class="date-message message" id="phone-message"></p>
+
+                <label for="birth-day">Fecha de nacimiento</label>
+                <input type="date" id="birth-day">
+                 <p class="date-message message" id="date-message"></p>
+
+                <fieldset class="genre-fieldset">
+                    <legend>G&eacute;nero</legend>
+                    <p>Seleccione su g&eacute;nero</p>
+                    <label for="gender-male">Hombre</label>
+                    <input type="radio" id="gender-male" name="genre" value="male">
+                    <label for="gender-female">Mujer</label>
+                    <input type="radio" id="gender-female" name="genre" value="female">
+                    <label for="gender-other">Otro</label>
+                    <input type="radio" id="gender-other" name="genre" value="other" checked>
+                </fieldset>
+                
+                
+                <label for="password">Crear contraseña</label>
+                <input type="password" id="password"  >
+                <p class="passwor-message message" id="date-message"></p>
+
+                <label for="confirm-password">Confirmar contraseña</label>
+                <input type="password" id="confirm-password" >
+                <p class="confirm-message message" id="date-message"></p>
+
+                <fieldset class="sports-fieldset">
+                    <legend>Deporte</legend>
+                    <p>Elige tu deporte favorito</p>
+                    <label for="football">Futbol</label>
+                    <input type="checkbox" id="football" value="football">
+                    <label for="basketball">Basketbol</label>
+                    <input type="checkbox" id="basketball" value="basketball" checked>
+                    <label for="baseball">Beisbol</label>
+                    <input type="checkbox" id="baseball" value="baseball">
+                    <label for="other">Otro</label>
+                    <input type="checkbox" id="other" value="other">
+                </fieldset>
+                
+                <button  class="primary-button">Enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
