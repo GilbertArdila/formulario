@@ -16,21 +16,21 @@
         <section class="main-form-section">
             <form action="#" class="main-form">
                 <label for="name">Nombre y apellido</label>
-                <input type="text" id="name"  autocomplete="name" placeholder="Juan Perez" autofocus>
-                <p class="name-message message" id="date-message"></p>
+                <input type="text" id="name"  autocomplete="name" placeholder="Juan Perez" >
+                <p class="name-message message" id="name-message"></p>
                 
 
                 <label for="mail">E-mail</label>
                 <input type="email" id="mail"  autocomplete="email" placeholder="juan_perez@gmail.com" inputmode="verbatim">
-                <p class="date-message message" id="mail-message"></p>
+                <p class="mail-message message" id="mail-message"></p>
                 
                 <label for="phone">Tel&eacute;fono</label>
-                <input type="number" id="phone"  autocomplete="tel" inputmode="numeric" >
-                <p class="date-message message" id="phone-message"></p>
+                <input type="number" id="phone"  autocomplete="tel" inputmode="numeric" placeholder="6075556699">
+                <p class="phone-message message" id="phone-message"></p>
 
                 <label for="birth-day">Fecha de nacimiento</label>
-                <input type="date" id="birth-day">
-                 <p class="date-message message" id="date-message"></p>
+                <input type="date" id="birth-day" >
+                 <p class="date-message message" id="date-message" ></p>
 
                 <fieldset class="genre-fieldset">
                     <legend>G&eacute;nero</legend>
@@ -46,11 +46,11 @@
                 
                 <label for="password">Crear contraseña</label>
                 <input type="password" id="password"  >
-                <p class="passwor-message message" id="date-message"></p>
+                <p class="password-message message" id="password-message"></p>
 
                 <label for="confirm-password">Confirmar contraseña</label>
-                <input type="password" id="confirm-password" >
-                <p class="confirm-message message" id="date-message"></p>
+                <input type="password" id="confirm_password" >
+                <p class="confirm-message message" id="confirm-message"></p>
 
                 <fieldset class="sports-fieldset">
                     <legend>Deporte</legend>
@@ -65,11 +65,12 @@
                     <input type="checkbox" id="other" value="other">
                 </fieldset>
                 
-                <button  class="primary-button">Enviar</button>
+                <button  class="primary-button" id="button">Enviar</button>
             </form>
         </section>
     </main>
     
     <script src="./index.js"></script>
+    <script src="./regex.js"></script>
 </body>
 </html>

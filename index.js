@@ -1,13 +1,18 @@
-//acepatamos caracteres almenos una vez, que no sean salto de linea, de  la a-z, A-Z,0-9,caracteres especiales @*$#, y no acepamos =+-/_ ni saltos de linea, ni espacio en blanco, min 6 max 12
-const regex_password=new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$#*])(?!.*[ +-/_=]).{6,12}$/)
 
-const password="M@ry0208";
-//console.log (regex_password.test(password));
 
-//obtenemos el input
+//getting the form inputs
+const userName=document.getElementById("name");
+const mail=document.getElementById("mail");
+const phone=document.getElementById("phone");
 const getFormDate=document.getElementById("birth-day");
-//comprobar que la persona sea mayor de 18 años
+const password=document.getElementById("password");
+const confirm_password=document.getElementById("confirm-password");
+const button=document.getElementById("button");
 
+
+
+
+//checking if person is older than 18 years
 function calcularEdad (getDate){
     //obtenemos el valor del input
     getDate=getFormDate.value;
@@ -29,11 +34,31 @@ function calcularEdad (getDate){
     }
     return actualAge;
 }
-getFormDate.addEventListener("blur", function(evento){
-  
-    if(calcularEdad(evento.target)<18){
-        const mensaje=document.getElementById("date-message");
+
+//adding blur to the date input to check age
+ getFormDate.addEventListener("blur", function(evento){
+    var mensaje=document.getElementById("date-message");
+
+     if(calcularEdad(evento.target)<18){
         mensaje.innerText="Lo sentimos, eres menor de edad; no podemos permitir tu registro"
         getFormDate.style.border="1px solid red"
+    }else{
+        mensaje.innerText="";
+        getFormDate.style.border="1px solid blue"
     }
-})
+ })
+
+ userName.addEventListener("blur",function(){
+    var mensaje=document.getElementById("name-message");
+    console.log(userName.value)
+    if(regex_name.test(userName.value.trim())){
+        mensaje.innerText="";
+        userName.style.border="1px solid blue"
+    }else{
+        mensaje.innerText="El formato de nombre es invalido; por favor ingresa nombre apellido sin caracteres especiales ni números ";
+        userName.style.border="1px solid red"
+    }
+ })
+
+
+
