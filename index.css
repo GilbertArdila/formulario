@@ -77,5 +77,41 @@ main{
 }
 .message{
     color: red;
-    
 }
+.checked{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 250px;
+    top:550px;
+    background-color: white;
+    border: 1px solid blue;
+    z-index: 100;
+}
+ .checked div{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 5px 10px;
+ }
+ .checked div .title{
+     color: red;
+     margin-bottom: 10px;
+ }
+ .checked div .checked_message{
+     color: black;
+     margin-bottom: 30px;
+ }
+ .checked div .close{
+     border:none;
+     width: 100px;
+     padding: 10px;
+     text-align: center;
+     background-color: blue;
+     margin-bottom: 10px;
+     border-radius: 10px;
+     color: white;
+ }
