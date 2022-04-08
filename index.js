@@ -183,3 +183,18 @@ mail.addEventListener("blur",function(){
     event.preventDefault();
     message_box.style.display="none"
  })
+ //whatch password
+ const ver=document.getElementById("watch-img");
+
+ ver.addEventListener("click", function(){
+     if( password.type==="password" ||  confirm_password.type==="password"){
+        password.type="text";
+        confirm_password.type="text";
+     }else{
+        password.type="password";
+        confirm_password.type="password";
+     }
+      
+      
+       
+ })
