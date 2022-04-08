@@ -8,4 +8,4 @@ const regex_name = new RegExp(/^[ÁÉÍÓÚA-Z]?[a-záéíóú]+[\s]+([ÁÉÍÓ�
 const regex_email=new RegExp(/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/)
 
 //validamos solamente numeros, le damos una longitud de 10 dígitos
-const regex_phone=new RegExp(/^[0-9](\d{9})$/)
+const regex_phone=new RegExp(/^[0-9](\d{9})(?!.*[ +/_=-])$/)
